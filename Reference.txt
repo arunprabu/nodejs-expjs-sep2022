@@ -1,0 +1,170 @@
+
+
+NodeJS
+VS Code 
+Browser 
+
+
+
+ECMAScript 
+---
+  * Standard 
+  * Grammar for interaction layer 
+  * Implementations: JS, JScript, ActionScript, QtScript, Google Apps Script
+
+
+  
+  Before ECMAScript 2015
+  --- 
+    JS was not object oriented, no class, no extends, no import, no export 
+
+  After ECMAScript 2015
+  --
+    JS has become object oriented, class, extends, import, export 
+    many new features 
+
+
+Webapps
+--
+  1. Server Side Rendering Apps (SSR Apps)
+      * Pages will reload 
+      * Arch: 1 Server 
+      * Codebase: Front End (HTML, CSS, JS) + Back End (PHP) + DB Queries  (SQL)
+      * Response: HTML + CSS + JS + DATA 
+
+
+  2. Client Side Rendering Apps (CSR Apps)
+      * Pages will not refresh 
+      * Arch: 2 Server 
+          1 Server for the FE app 
+            Response: HTML + CSS + JS (Wait for the data)
+
+          1 Server for the BE app (RESTful API)
+            Response: Data / JSON 
+
+      * Codebase 
+          1. Front End App (HTML, CSS, JS)
+          2. Back End App (PHP + DB Queries) A.K.A REST API 
+
+
+What will be we develop?
+   SSR App [2], REST API App
+
+
+Front End 
+---
+  JS 
+
+Back End 
+--
+  Java/DotNet/Php/Perl/Python/Ruby/NodeJS (JS)
+
+Desktop Apps
+--
+  Java/DotNet/Python/Electron JS (JS)
+
+Mobile Apps
+--
+  Java(Android app), 
+  DotNet (Using Xamarine both Android and iOS App)
+  JS (using Ionic / React Native / NativeScript)
+
+DB 
+---
+  Using SQL (MySQL, MariaDB, MS-SQL Server, PostgreSQL)
+  Using JS (MongoDB)
+
+
+
+
+NodeJS (33 Hours)
+--
+  1. Browser, Browser Core and Browser war 
+  2. JS Engine 
+  3. Limitations of JS 
+  4. What is NodeJS ?
+  5. Why NodeJS? 
+  6. Competitors?
+      Java/DotNet/PHP/Perl/Python/Ruby
+  7. Adv NodeJS 
+  8. Arch of NodeJS 
+
+
+
+Java    => (javac)  => Bytecode / classfile => (JRE) => Machine Language
+
+
+Browser
+--
+  Browser Core = HTML Renderer + CSS Parser + JS Engine
+
+  Browser
+  --
+    1994: Netscape Navigator 
+    1995: Internet Explorer 
+    1995: Opera 
+
+    2002: Mozilla Browser by Netscape 
+          Browser Core: Mozilla (Open Sourced)
+
+    2003: Safari Browser By Apple 
+          Browser Core: Webkit (Open Sourced)
+
+    2007: Firefox Browser By Mozilla 
+          Browser Core: Mozilla (Open Sourced)
+
+    2008: Chrome Browser By Google
+          Browser Core: Chromium [Webkit + Mozilla + v8 JS Engine] (Open Sourced)
+
+    Google Open Sourced
+    --
+      * Chromium Core 
+      * V8 JS Engine [ JS => (v8) => Machine Language ]
+      
+    NodeJS 
+    --
+      * JS Runtime 
+      * built on V8 JS Engine 
+      * optimized version of JS for the Back End Side 
+
+    Characteristics of a Back End Language
+    ---
+      1. Async / Multithreading
+      2. Receiving Http Req and Sending Response 
+      3. Dealing with File Systems 
+      4. Deal with Databases 
+
+
+    JS on the Front End 
+    ---
+      1. Sync 
+      2. Sending Http Req and Receiving Response 
+      3. Can't access File System (FS) 
+      4. Can't connect with DB 
+
+    Challenges for JS to Become Back End Language?
+    ---
+      1. Async 
+      2. Communicating over internet 
+      3. Dealing with File Systems 
+      4. Deal with Databases 
+
+
+---
+10 Examples 
+---
+
+  
+
+
+
+        
+
+
+
+
+
+  
+
+
+
