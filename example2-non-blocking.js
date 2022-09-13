@@ -5,12 +5,13 @@
 console.log('Program Started');
 const fs = require('fs');
 
-fs.readFile('./sample.txt', (err, data) => { // TO LEARN callback fn in nodejs
-  if(!err){
-    console.log(data.toString());
-  }else{
-    console.log(err);
+fs.readFile('./sample1.txt', (err, data) => { // error first callback
+  if (err) {
+    //console.log(err);
+    throw err;
   }
+  console.log(data.toString());
+  
 });
 
 console.log('Program Ended');
