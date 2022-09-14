@@ -1,0 +1,7 @@
+1. Have an util fn in http example 10 
+  through the util fn server html 
+
+2. Have http example 11 - learn about sending the separate html files 
+    have a folder 'templates/index.html'
+
+3. 
