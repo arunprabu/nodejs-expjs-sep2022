@@ -1,4 +1,6 @@
 // Buffer objects are used to represent a fixed-length sequence of bytes. Many Node.js APIs support Buffers.
+// File Reading and writing will have to deal with only binay data (0's and 1's ). 
+// So, NodeJs needs buffer. 
 
 // Each integer in a buffer represents a byte
 const dummyText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a congue lorem. Nulla facilisi. Suspendisse mauris nisi, elementum sit amet luctus vel, mollis eu sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed fermentum elit nec gravida semper. Suspendisse egestas tortor odio, non accumsan nulla suscipit vitae. Praesent interdum ut nibh sed venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.';
