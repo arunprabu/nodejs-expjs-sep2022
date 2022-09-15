@@ -1,0 +1,22 @@
+CRUD App 
+--
+  MongoDB using mongoose 
+  --
+    Create User 
+    Read Users / Read User Details 
+    update USer 
+    Delete USer [TODO]
+
+  MySQL using sequelize 
+  --
+    Create employee
+    Read employees 
+
+  Authentication using PAssport JS 
+  ---
+
+
+  Form Validation
+  --
+
+  

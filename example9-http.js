@@ -67,8 +67,6 @@ http.createServer( (req, res) => {
       </html>`);
   }
 
-  
-
 }).listen(3000, () => {
   console.log('Server is started on PORT: 3000. Open the URL http://localhost:3000');
 });

@@ -155,7 +155,33 @@ Browser
 ---
 
   
+---
+NPM Dependencies
 
+  1. Project Dependencies
+      * Will be needed for thr pjt's  functionality to work 
+      * will be part of the prod build
+
+      npm i express
+      npm i express --save
+      npm i express -S 
+
+      can be tracked here 
+      "dependencies": {
+        "express": "^4.18.1"
+      }
+
+  2. Dev Dependencies
+      * Will be needed for the pjt to be developed. 
+      * to have better, smoother, dev workflow 
+      * will never be part of the prod build
+
+      npm i typescript --save-dev
+      npm i typescript -D
+
+        
+  3. Global Dependencies 
+  4. Peer Dependencies 
 
 
         
