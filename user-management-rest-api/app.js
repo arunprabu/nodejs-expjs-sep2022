@@ -7,6 +7,7 @@ var logger = require('morgan');
 // custom imports
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
+var usersRouter = require('./routes/api/users');
 
 var app = express(); // Creates an Express application.
 
@@ -22,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); // localhost:3000/ 
 app.use('/about', aboutRouter);
+
+/* API Endpoints */
+app.use('/api/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
