@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router(); 
 
-/* GET home page. */ 
+/* GET about page. */ 
 router.get('/', (req, res, next) => {
   console.log(req.url);
   
-  // server side rendering using template engine
-  // like ejs, jade, pug
-  res.render('index', { title: 'Home Page' });
+  res.render('about', { title: 'About Page' });
 });
 
 module.exports = router;
