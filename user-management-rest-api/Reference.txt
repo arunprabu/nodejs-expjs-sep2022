@@ -74,5 +74,41 @@ REST API Endpoints
 
 ---
 
+Databases
+--
+  1. DB Server
+      host / ip address: localhost or 127.0.0.1 
+      port: ..... 
+      db credentials (username and password)
+
+  2. DB Client
+      Shell Client 
+      GUI Client
+      .... 
+
+
+Types Of DBMS
+--
+  1. Relational DBMS (RDBMS)
+      * Oracle, MySQL, PostgreSQL, MariaDB, MS-SQL Server 
+      * Data will be saved in Databases 
+        * Data would be saved in Tables of the databases (columns and rows)
+      * Interact with db using Structure Query Language (SQL) 
+      * Schema based 
+      * Perfect for structured data
+
+  2. NoSQL (Not Only SQL)
+      * MongoDB, Amazon DynamoDB, Apache Ignite
+      * Data will be saved in Databases 
+        * Data would be saved in Collections of the databases 
+        * stored in fields (key and value)
+        * will be in the form of Object - JSON
+      * Interact with MongoDB using JavaScript
+      * Schema-less 
+      * Perfect for unstructured data
+
+
+MongoDB 
+--
 
 
