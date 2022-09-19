@@ -20,3 +20,59 @@ CRUD App
   --
 
   
+Monday
+--
+
+  M V C 
+  --
+
+  MongoDB 
+  --
+
+Tuesday
+--
+  Completing REST API with MongoDB
+  Validations 
+  CORS 
+  Setting up base for Authentication
+
+Wednesday
+--
+  Completing Authentication
+
+Thursday
+--
+  MYSQL 
+  Deployment 
+  Best practices 
+  Optimizations 
+
+
+
+REST API Endpoints
+--
+  CRUD App 
+  --
+    Add User  - POST [DONE]
+      http://localhost:3000/api/users
+
+    Listing Users - GET [DONE]
+      http://localhost:3000/api/users
+
+    User Details - GET [DONE]
+      http://localhost:3000/api/users/1
+
+    Update User - PUT [DONE]
+      http://localhost:3000/api/users/1
+
+    Delete User - DELETE [TODO]
+      http://localhost:3000/api/users/1
+
+---
+
+  Design Pattern: MVC 
+
+---
+
+
+
