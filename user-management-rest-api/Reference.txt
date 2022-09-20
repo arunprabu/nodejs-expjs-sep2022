@@ -110,5 +110,78 @@ Types Of DBMS
 
 MongoDB 
 --
+Windows: 
+  C:/Program Files/MongoDB/Server/4.0/bin/> 
+  
+  Start MongoDB Server: 
+    C:/Program Files/MongoDB/Server/4.0/bin/>mongod 
+
+  Launch the Client Tool: 
+    C:/Program Files/MongoDB/Server/4.4/bin/>mongo 
+    
+  Port: 27017 
+
+  
+Mac
+--
+  if you have installed it thru brew, start the server 
+    brew services start mongodb-community@5.0
+
+  Launch the Client Tool: 
+    mongo 
+  
+
+
+===
+MongoDB commands
+--
+  to know selected db 
+    db
+
+  to list all dbs  (only the dbs with collections will appear)
+    show dbs 
+
+  to create a db or to select a db 
+    use usersDB 
+  
+  check the selected db 
+    db 
+
+  Create a colection 
+    db.createCollection('users')
+
+  to see all collctions of the selected db 
+    show collections
+
+  to insert (CREATE) -- we create document - equal to rows 
+    db.users.insert({ name: 'John', city: 'Sydney' })
+    db.users.insert({ phone: 23423423, email: 'a@b.com' } )
+    db.users.insert({age: 20})
+    db.users.insert({cities: ['chennai', 'bangalore', 'hyderabad']})
+
+  to list all documents (READ)
+    db.users.find({}) 
+
+  to fetch one document with _id being primary key (READ)
+    db.users.findOne({"_id" : ObjectId("63298467d911d70320defef1")})
+
+  to update one document 
+    db.users.updateOne({name: 'John'}, { $set: {age: 40} })
+
+  TODO: learn about deleting the document 
+    
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
 
 
