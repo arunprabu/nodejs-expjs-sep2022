@@ -84,7 +84,7 @@ Databases
   2. DB Client
       Shell Client 
       GUI Client
-      .... 
+      DB Driver  (MongoDB Official Driver, )
 
 
 Types Of DBMS
@@ -106,6 +106,8 @@ Types Of DBMS
       * Interact with MongoDB using JavaScript
       * Schema-less 
       * Perfect for unstructured data
+
+      Requirement: Save structured data in MongoDB. 
 
 
 MongoDB 
@@ -172,16 +174,10 @@ MongoDB commands
     
 
   
-
+MongooseJS
+---
+  * Unofficial Driver 
+  * Offering the data modeling 
+  * provides the schema for mongodb 
   
-
-
-  
-
-
-
-
-
-
-
 
