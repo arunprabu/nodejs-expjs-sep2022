@@ -16,7 +16,7 @@ exports.createUser = (req, res) => {
   userDao.save( (err, data) => {
     if(!err){
       console.log(data);
-      res.json(data);
+      res.status(201).json(data);
     }else{
       console.log(err);
       res.json(err);
@@ -26,13 +26,13 @@ exports.createUser = (req, res) => {
 
 // Get Users  (listing users )
 exports.getUsers =  (req, res) => {
-  const userList = [{
-    id: 1, 
-    name: 'John',
-    phone: '+91-234242233',
-    email: 'j@k.com'
-  }];
-  res.status(200).json(userList);
+  User.find({}, (err, data) => {
+    if(!err){
+      res.status(200).json(data);
+    }else{
+      res.json(err);
+    }
+  });
 }
 
 // Get User Details 
@@ -40,14 +40,13 @@ exports.getUserById = (req, res) => { // userId is URL Param
 
   // reading url param 
   console.log(req.params.userId);
-  const userData = {
-    id: req.params.userId, 
-    name: 'John',
-    phone: '+91-234242233',
-    email: 'j@k.com'
-  }
-
-  res.status(200).json(userData);
+  User.findOne({_id: req.params.userId}, (err, data) => {
+    if(!err){
+      res.status(200).json(data);
+    }else{
+      res.json(err);
+    }
+  });
 }
 
 // Update User
@@ -59,12 +58,14 @@ exports.updateUserById = (req, res) => { // userId is URL Param
   // let's read the form data-- req.body
   console.log(req.body);
 
-  const updatedUserData = {
-    id: req.params.userId, 
-    ...req.body
-  }
-
-  res.status(201).json(updatedUserData);
+  // also try findOneAndUpdate - and find the difference
+  User.updateOne({_id: req.params.userId}, req.body, (err, data) => {
+    if(!err){
+      res.status(201).json(data);
+    }else{
+      res.json(err);
+    }
+  });
 }
 
 // TODO: Delete User 
