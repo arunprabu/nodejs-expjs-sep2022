@@ -84,7 +84,7 @@ Databases
   2. DB Client
       Shell Client 
       GUI Client
-      DB Driver  (MongoDB Official Driver, )
+      DB Driver  (MongoDB Official Driver, MongooseJS )
 
 
 Types Of DBMS
@@ -107,7 +107,7 @@ Types Of DBMS
       * Schema-less 
       * Perfect for unstructured data
 
-      Requirement: Save structured data in MongoDB. 
+      Requirement: Save Partially structured data in MongoDB. 
 
 
 MongoDB 
