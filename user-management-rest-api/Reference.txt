@@ -7,17 +7,18 @@ CRUD App
     update USer 
     Delete USer [TODO]
 
-  MySQL using sequelize 
-  --
-    Create employee
-    Read employees 
-
   Authentication using PAssport JS 
   ---
 
 
-  Form Validation
-  --
+  MySQL using sequelize 
+  -
+    Create employee
+    Read employees 
+    
+    Build and Deployment 
+    Unit Testing 
+
 
   
 Monday
@@ -180,4 +181,70 @@ MongooseJS
   * Offering the data modeling 
   * provides the schema for mongodb 
   
+
+Why?
+--  
+
+  HTTP 
+    * stateless 
+
+  client (example.com/login)      => server 
+  client                          <= server 
+
+  client (example.com/reports)    => server 
+  client                          <= server 
+
+
+Authentication
+--
+  1. Session Based Authentication
+       email, password 
+       1. if valid 
+            session id would be created and SAVED in server 
+              server will send session id to the browser 
+                browser should store in cookies 
+                  (every subsequent req post-login)
+                    browser should send the session id in cookies to the server 
+                      (before sending further res to the client )
+                        server will compare the session id coming from browser with the one saved 
+                          if matches 
+                            then, res will be sent to the browser 
+                          else 
+                            login again  
+
+       2. else 
+            login again with valid credentials 
+
+
+      Disadvantages 
+      ---
+        Session ID should be maintained by the server 
+        
+
+  2. Token Based Authentication
+      email, password 
+       1. if valid 
+          JSON Web Token (JWT) would be generated using some encryption
+            server will send JWT to the browser 
+              browser should store in cookies/localStorage/sessionStorage
+                (every subsequent req post-login)
+                  browser should send the JWT in req header to the server 
+                    (before sending further res to the client )
+                      server will validate the JWT coming from browser using decryption
+                        if valid
+                          then, res will be sent to the browser 
+                        else 
+                          login again  
+
+        2. else 
+            login again with valid credentials 
+
+
+
+---
+Auth URL's  
+--
+  localhost:3000/api/auth/signup - POST 
+  localhost:3000/api/auth/login  - POST 
+
 

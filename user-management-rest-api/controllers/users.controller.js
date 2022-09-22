@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const User = require('../models/users.model');
 
 // Create a new User 
@@ -9,7 +10,14 @@ exports.createUser = (req, res) => {
   3. insert the above data into db 
   4. get the confirmation from db and send it back 
   */
-
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400)
+              .json({ 
+                errors: errors.array() 
+              });
+  }
+  
   // creating DAO 
   const userDao = new User(req.body);
   // saving to create a new document by folowing syntax of mongoose
