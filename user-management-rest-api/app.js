@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+passport.initialize(); // setting up auth middleware
 
 app.use('/', indexRouter); // localhost:3000/ 
 app.use('/about', aboutRouter);
