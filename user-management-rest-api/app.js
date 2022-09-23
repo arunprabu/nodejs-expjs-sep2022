@@ -3,12 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const passport = require('passport');
 
 // custom imports
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var usersRouter = require('./routes/api/users');
 var authRouter = require('./routes/api/auth');
+
+require('./config/passport.config'); // setting up passport
 
 var app = express(); // Creates an Express application.
 
@@ -21,6 +24,8 @@ app.use(express.json()); // enabled to handle req with json data
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use('/', indexRouter); // localhost:3000/ 
 app.use('/about', aboutRouter);

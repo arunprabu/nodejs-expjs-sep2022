@@ -239,12 +239,22 @@ Authentication
         2. else 
             login again with valid credentials 
 
-
-
 ---
 Auth URL's  
 --
   localhost:3000/api/auth/signup - POST 
   localhost:3000/api/auth/login  - POST 
+
+
+Friday
+--
+Authentication 
+Unit Testing - Intro 
+
+Monday 
+--
+Unit Testing - Continues 
+MySQL - sequelize 
+Deployment 
 
 
