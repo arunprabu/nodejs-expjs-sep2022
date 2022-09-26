@@ -18,7 +18,8 @@ module.exports = (sequelize, Sequelize) => {
 };
 
 /*
-This Sequelize Model represents employees table in MySQL database. These columns will be generated automatically: id, title, description, published, createdAt, updatedAt.
+This Sequelize Model represents employees table in MySQL database.
+These columns will be generated automatically: id, createdAt, updatedAt.
 After initializing Sequelize, we don’t need to write CRUD functions, Sequelize supports all of them:
 create a new employee: create(object)
 find a employee by id: findByPk(id)

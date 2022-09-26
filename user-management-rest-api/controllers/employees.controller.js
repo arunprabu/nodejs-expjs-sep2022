@@ -1,5 +1,5 @@
 const db = require("../models/mysql");
-const Employee = db.employees;
+const Employee = db.employees; // into the table
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Employee
@@ -11,18 +11,18 @@ exports.create = (req, res) => {
     });
     return;
   }
-  // Create a Tutorial
+  // Create an Employeee
   const employee = {
     name: req.body.name,
     city: req.body.city
   };
-  // Save Tutorial in the database
+  // Save Employeee in the database
   Employee.create(employee)
     .then(data => {
-      res.send(data);
+      res.json(data);
     })
     .catch(err => {
-      res.status(500).send({
+      res.status(500).json({
         message:
           err.message || "Some error occurred while creating the Employee."
       });
@@ -33,12 +33,13 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   //const title = req.query.title;
   //var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+
   Employee.findAll()
-    .then(data => {
-      res.send(data);
+    .then(data => { // if we get employees 
+      res.json(data);
     })
-    .catch(err => {
-      res.status(500).send({
+    .catch(err => { // if we error 
+      res.status(500).json({
         message:
           err.message || "Some error occurred while retrieving employees."
       });
@@ -51,15 +52,15 @@ exports.findOne = (req, res) => {
   Employee.findByPk(id)
     .then(data => {
       if (data) {
-        res.send(data);
+        res.json(data);
       } else {
-        res.status(404).send({
+        res.status(404).json({
           message: `Cannot find Employee with id=${id}.`
         });
       }
     })
     .catch(err => {
-      res.status(500).send({
+      res.status(500).json({
         message: "Error retrieving Employee with id=" + id
       });
     });

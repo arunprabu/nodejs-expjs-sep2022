@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('passport');
 
-
 //sequelize setup
 const db = require("./models/mysql");
 //db.sequelize.sync(); // this one you can try in prod..but in dev try the following

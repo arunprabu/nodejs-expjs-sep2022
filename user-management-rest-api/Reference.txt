@@ -85,7 +85,7 @@ Databases
   2. DB Client
       Shell Client 
       GUI Client
-      DB Driver  (MongoDB Official Driver, MongooseJS )
+      DB Driver  (MongoDB Official Driver, MongooseJS, MySQL )
 
 
 Types Of DBMS
