@@ -1,5 +1,6 @@
 const express = require('express');
 const { body } = require('express-validator');
+const authUtil = require('../../utils/auth.util');
 
 const { createUser, getUsers, getUserById, updateUserById } = require('../../controllers/users.controller');
 const router = express.Router();
@@ -22,7 +23,7 @@ router.post('/',
 router.get('/', getUsers);
 
 /* GET to get user details of specific user id */
-router.get('/:userId', getUserById);
+router.get('/:userId', authUtil.optional, getUserById);
 
 /* PUT to update user details of specific user id */
 router.put('/:userId', updateUserById);

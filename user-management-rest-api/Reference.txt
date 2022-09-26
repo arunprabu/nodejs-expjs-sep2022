@@ -245,16 +245,46 @@ Auth URL's
   localhost:3000/api/auth/signup - POST 
   localhost:3000/api/auth/login  - POST 
 
+dev 
+  Documents: Test cases / Test specs 
+    1. add should work only with numbers as inputs 
+    2. output should also be number 
+    3. if other than number is entered, add should be disabled 
 
-Friday
+  add feature
+  --
+    function add(a, b){
+      if(typeof a === 'number' && typeof b === 'number'){
+        return a + b;
+      }
+    }
+
+    add(10, 20); // 30
+
+  Write Test Cases => Write Dev Code => [ Setup Tools ] => SUCCESS
+
+
+Automated Testing 
 --
-Authentication 
-Unit Testing - Intro 
+  Levels 
+  0. Static Type Checking 
+  1. Unit Testing 
+      writing test spec code to test our fn code 
+      * tiny individual units 
+      * testing the routes without connecting to the db 
+
+      Tools: Mocha, Chai, NodeJs Assertion Library 
+
+  2. Integration Testing
+
+  3. E2E Testing 
+
+
 
 Monday 
 --
 Unit Testing - Continues 
-MySQL - sequelize 
+MySQL - sequelize (1 hour)
 Deployment 
 
 
